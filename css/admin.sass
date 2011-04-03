@@ -1,0 +1,203 @@
+$link_color: #0645ad
+
+input[type=text], input[type=password]
+  :font-size 140%
+  :padding 5px
+  :border 1px solid #ccc
+input[type=text], input[type=password], textarea
+  :width 180px
+input[type=submit]
+  :font-size 140%
+  :padding 5px 10px
+
+#overlay
+  :background white
+  :position fixed
+  :width 100%
+  :height 100%
+  :z-index 100
+  :opacity 0.8
+  :filter alpha(opacity=80)
+
+#dialog
+  :position fixed
+  :z-index 101
+  :top 200px
+  :left 50%
+  :border 2px solid #ccc
+  :width 450px
+  :margin-left -225px
+  :background white
+  .message
+    :padding 20px 20px 10px 20px
+    :text-align center
+  .buttons
+    :padding 0 20px 20px 20px
+    :text-align center
+    input
+      :margin 0 5px
+
+html.login
+  :background #d9d9d9
+  form
+    :width 400px
+    :border 3px solid #b3b3b3
+    :margin 100px auto 0 auto
+    :background white
+    h1
+      :margin 0
+      :padding 10px
+      :background #b3b3b3
+    .error, .success
+      :padding 10px
+    .error
+      :background #FCB6B8
+    .success
+      :background #CBE8BF
+    table
+      :margin-top 10px
+      :width 400px
+      td, th
+        :border 0
+        :padding 5px
+      th
+        :text-align right
+        :width 120px
+      td
+        input
+          :font-size 140%
+          :width 243px
+    .submit
+      :text-align right
+      :margin 10px
+  .footer
+    :width 400px
+    :margin 5px auto 0 auto
+    :color #b3b3b3
+
+#container
+  :width 920px
+  :margin 0 auto
+  #header
+    :padding 0 10px
+    :background #e6e6e6
+    & > h1
+      :margin 0
+      :float left
+      :line-height 40px
+    & > ul
+      :margin 0
+      & > li
+        :list-style-type none
+        :float left
+        :line-height 40px
+        :font-size 110%
+        :position relative
+        &:first-child
+          :margin-left 8px
+          :border-left 1px solid #ccc
+        :border-right 1px solid #ccc
+        a
+          :display block
+          :padding 0 8px
+          &:hover
+            :background $link_color
+            :color #ccc
+        &.logout
+          :float right
+          :border-left 1px solid #ccc
+        & > ul
+          :display none
+          :position absolute
+          :z-index 1
+          :margin 0
+          :top 35px
+          :left -1px
+          :border 2px solid #ccc
+          :background white
+          & > li
+            :list-style-type none
+            :margin 0
+            :border-top 1px solid #ccc
+            &:first-child
+              :border-top 0
+            a
+              :display block
+              :line-height 25px
+              :padding 0 20px 0 5px
+              :white-space nowrap
+              &:hover
+                :background $link_color
+                :color white
+        &:hover > ul
+          :display block
+  #flash-message, #flash-error
+    :padding 10px
+    p
+      :margin 0
+  #flash-message
+    :background #cf3
+  #flash-error
+    :background #ff7142
+  #body
+    :padding 10px
+    h2
+      :margin 0
+      :padding 10px
+      :border-bottom 1px solid #ccc
+
+table.form
+  :width 100%
+  :margin 10px 0
+  td, th
+    :vertical-align top
+    :border 0
+  th
+    :text-align right
+    :width 15%
+    :padding-top 13px
+  td
+    :width 55%
+  td.help
+    :width 30%
+    p
+      :margin 0
+      :color #ccc
+  input[type=text], input[type=password], textarea
+    :width 250px
+  textarea
+    :height 100px
+
+table.records
+  :margin 10px 0
+  :width 100%
+  td, th
+    :vertical-align top
+    :border 0
+  tr.odd
+    :background #fdfdfd
+  tr.even
+    :background #fbfbfb
+  td.actions
+    :text-align right
+    :padding 0
+    a
+      :display inline-block
+      :padding 2px
+      :margin 3px 0
+      :border 1px solid #ccc
+      :background #ccc
+      &:hover
+        :color #ccc
+        :background $link_color
+        :border 1px solid $link_color
+
+a
+  :text-decoration none
+  :color $link_color
+  &:hover
+    :text-decoration underline
+
+.clear
+  :clear both
+

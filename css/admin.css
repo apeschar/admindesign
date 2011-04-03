@@ -1,0 +1,201 @@
+input[type=text], input[type=password] {
+  font-size: 140%;
+  padding: 5px;
+  border: 1px solid #cccccc; }
+
+input[type=text], input[type=password], textarea {
+  width: 180px; }
+
+input[type=submit] {
+  font-size: 140%;
+  padding: 5px 10px; }
+
+#overlay {
+  background: white;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
+
+#dialog {
+  position: fixed;
+  z-index: 101;
+  top: 200px;
+  left: 50%;
+  border: 2px solid #cccccc;
+  width: 450px;
+  margin-left: -225px;
+  background: white; }
+  #dialog .message {
+    padding: 20px 20px 10px 20px;
+    text-align: center; }
+  #dialog .buttons {
+    padding: 0 20px 20px 20px;
+    text-align: center; }
+    #dialog .buttons input {
+      margin: 0 5px; }
+
+html.login {
+  background: #d9d9d9; }
+  html.login form {
+    width: 400px;
+    border: 3px solid #b3b3b3;
+    margin: 100px auto 0 auto;
+    background: white; }
+    html.login form h1 {
+      margin: 0;
+      padding: 10px;
+      background: #b3b3b3; }
+    html.login form .error, html.login form .success {
+      padding: 10px; }
+    html.login form .error {
+      background: #fcb6b8; }
+    html.login form .success {
+      background: #cbe8bf; }
+    html.login form table {
+      margin-top: 10px;
+      width: 400px; }
+      html.login form table td, html.login form table th {
+        border: 0;
+        padding: 5px; }
+      html.login form table th {
+        text-align: right;
+        width: 120px; }
+      html.login form table td input {
+        font-size: 140%;
+        width: 243px; }
+    html.login form .submit {
+      text-align: right;
+      margin: 10px; }
+  html.login .footer {
+    width: 400px;
+    margin: 5px auto 0 auto;
+    color: #b3b3b3; }
+
+#container {
+  width: 920px;
+  margin: 0 auto; }
+  #container #header {
+    padding: 0 10px;
+    background: #e6e6e6; }
+    #container #header > h1 {
+      margin: 0;
+      float: left;
+      line-height: 40px; }
+    #container #header > ul {
+      margin: 0; }
+      #container #header > ul > li {
+        list-style-type: none;
+        float: left;
+        line-height: 40px;
+        font-size: 110%;
+        position: relative;
+        border-right: 1px solid #cccccc; }
+        #container #header > ul > li:first-child {
+          margin-left: 8px;
+          border-left: 1px solid #cccccc; }
+        #container #header > ul > li a {
+          display: block;
+          padding: 0 8px; }
+          #container #header > ul > li a:hover {
+            background: #0645ad;
+            color: #cccccc; }
+        #container #header > ul > li.logout {
+          float: right;
+          border-left: 1px solid #cccccc; }
+        #container #header > ul > li > ul {
+          display: none;
+          position: absolute;
+          z-index: 1;
+          margin: 0;
+          top: 35px;
+          left: -1px;
+          border: 2px solid #cccccc;
+          background: white; }
+          #container #header > ul > li > ul > li {
+            list-style-type: none;
+            margin: 0;
+            border-top: 1px solid #cccccc; }
+            #container #header > ul > li > ul > li:first-child {
+              border-top: 0; }
+            #container #header > ul > li > ul > li a {
+              display: block;
+              line-height: 25px;
+              padding: 0 20px 0 5px;
+              white-space: nowrap; }
+              #container #header > ul > li > ul > li a:hover {
+                background: #0645ad;
+                color: white; }
+        #container #header > ul > li:hover > ul {
+          display: block; }
+  #container #flash-message, #container #flash-error {
+    padding: 10px; }
+    #container #flash-message p, #container #flash-error p {
+      margin: 0; }
+  #container #flash-message {
+    background: #ccff33; }
+  #container #flash-error {
+    background: #ff7142; }
+  #container #body {
+    padding: 10px; }
+    #container #body h2 {
+      margin: 0;
+      padding: 10px;
+      border-bottom: 1px solid #cccccc; }
+
+table.form {
+  width: 100%;
+  margin: 10px 0; }
+  table.form td, table.form th {
+    vertical-align: top;
+    border: 0; }
+  table.form th {
+    text-align: right;
+    width: 15%;
+    padding-top: 13px; }
+  table.form td {
+    width: 55%; }
+  table.form td.help {
+    width: 30%; }
+    table.form td.help p {
+      margin: 0;
+      color: #cccccc; }
+  table.form input[type=text], table.form input[type=password], table.form textarea {
+    width: 250px; }
+  table.form textarea {
+    height: 100px; }
+
+table.records {
+  margin: 10px 0;
+  width: 100%; }
+  table.records td, table.records th {
+    vertical-align: top;
+    border: 0; }
+  table.records tr.odd {
+    background: #fdfdfd; }
+  table.records tr.even {
+    background: #fbfbfb; }
+  table.records td.actions {
+    text-align: right;
+    padding: 0; }
+    table.records td.actions a {
+      display: inline-block;
+      padding: 2px;
+      margin: 3px 0;
+      border: 1px solid #cccccc;
+      background: #cccccc; }
+      table.records td.actions a:hover {
+        color: #cccccc;
+        background: #0645ad;
+        border: 1px solid #0645ad; }
+
+a {
+  text-decoration: none;
+  color: #0645ad; }
+  a:hover {
+    text-decoration: underline; }
+
+.clear {
+  clear: both; }

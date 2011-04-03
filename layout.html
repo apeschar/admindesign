@@ -1,0 +1,44 @@
+{% load url from future %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl">
+<head>
+    <title>{% block title %}Kino Kontroller{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kinomin/css/kinomin.css"/>
+    <script type="text/javascript">
+        STATIC_URL = '{{ STATIC_URL|escapejs }}';
+        MEDIA_URL = '{{ MEDIA_URL|escapejs }}';
+    </script>
+    <script type="text/javascript" src="{{ STATIC_URL }}kinomin/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}kinomin/js/kinomin.js"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div id="header">
+        <h1>kino kontroller</h1>
+        <ul class="menu">
+            <li>
+                <a href="{% url 'kinomin.views.projects.index' %}">Projecten</a>
+                <ul>
+                    <li><a href="{% url 'kinomin.views.projects.index' %}">Projecten</a></li>
+                    <li><a href="{% url 'kinomin.views.projects.edit' %}">Nieuw project</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="{% url 'kinomin.views.videos.index' %}">Video's</a>
+                <ul>
+                    <li><a href="{% url 'kinomin.views.videos.index' %}">Alle video's</a></li>
+                    <li><a href="{% url 'kinomin.views.videos.new' %}">Nieuwe video</a></li>
+                </ul>
+            </li>
+            <li class="logout"><a href="{% url 'kinomin.views.logout' %}">Uitloggen</a></li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    {% if flash.message %}<div id="flash-message"><p>{{ flash.message|linebreaksbr }}</p></div>{% endif %}
+    {% if flash.error %}<div id="flash-error"><p>{{ flash.error|linebreaksbr }}</p></div>{% endif %}
+    <div id="body">
+        {% block body %}{% endblock %}
+    </div>
+</body>
+</html>
