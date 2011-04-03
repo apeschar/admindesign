@@ -39,34 +39,34 @@ input[type=submit] {
 
 html.login {
   background: #d9d9d9; }
-  html.login form {
+  html.login div.login, html.login form.login {
     width: 400px;
     border: 3px solid #b3b3b3;
     margin: 100px auto 0 auto;
     background: white; }
-    html.login form h1 {
+    html.login div.login h1, html.login form.login h1 {
       margin: 0;
       padding: 10px;
       background: #b3b3b3; }
-    html.login form .error, html.login form .success {
+    html.login div.login .error, html.login div.login .success, html.login form.login .error, html.login form.login .success {
       padding: 10px; }
-    html.login form .error {
+    html.login div.login .error, html.login form.login .error {
       background: #fcb6b8; }
-    html.login form .success {
+    html.login div.login .success, html.login form.login .success {
       background: #cbe8bf; }
-    html.login form table {
+    html.login div.login table, html.login form.login table {
       margin-top: 10px;
       width: 400px; }
-      html.login form table td, html.login form table th {
+      html.login div.login table td, html.login div.login table th, html.login form.login table td, html.login form.login table th {
         border: 0;
         padding: 5px; }
-      html.login form table th {
+      html.login div.login table th, html.login form.login table th {
         text-align: right;
         width: 120px; }
-      html.login form table td input {
+      html.login div.login table td input, html.login form.login table td input {
         font-size: 140%;
         width: 243px; }
-    html.login form .submit {
+    html.login div.login .submit, html.login form.login .submit {
       text-align: right;
       margin: 10px; }
   html.login .footer {
