@@ -1,0 +1,7 @@
+You need SASS to compile the CSS from the SASS file in css/. Install
+rubygems and then install haml using:
+
+  $  gem install haml
+
+Have fun!
+
